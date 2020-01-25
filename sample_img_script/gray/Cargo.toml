@@ -1,0 +1,20 @@
+[package]
+name = "gray"
+version = "0.1.0"
+authors = ["upamasaki <m.tani.july@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[target.x86_64-unknown-linux-gnu.dependencies.xlib]
+git = "https://github.com/servo/rust-xlib"
+[target.i686-unknown-linux-gnu.dependencies.xlib]
+git = "https://github.com/servo/rust-xlib"
+
+[dependencies]
+libc = "*"
+screenshot = "*"
+
+[dev-dependencies]
+bmp = "*"
+image = "*"
